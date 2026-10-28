@@ -1,13 +1,13 @@
 {
-  "name": "Kinetics Lab",
+  "name": "Kinetics Keyword Quiz",
   "short_name": "Kinetics",
-  "description": "Daily active-recall trainer for A-Level reaction kinetics.",
+  "description": "Learn A-Level Chemistry kinetics one keyword at a time.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#070b0f",
-  "theme_color": "#070b0f",
+  "background_color": "#eef7f3",
+  "theme_color": "#eef7f3",
   "icons": [
     {
       "src": "./icon-192.png",
@@ -20,6 +20,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Continue",
+      "short_name": "Continue",
+      "description": "Jump to your next level",
+      "url": "./",
+      "icons": [{ "src": "./icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
 }

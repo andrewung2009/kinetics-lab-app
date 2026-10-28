@@ -1,5 +1,5 @@
-const VERSION = "v1";
-const CACHE = `kinetics-lab-${VERSION}`;
+const VERSION = "v3";
+const CACHE = `kinetics-quiz-${VERSION}`;
 const ASSETS = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (event) => {
@@ -24,6 +24,21 @@ self.addEventListener("fetch", (event) => {
   const request = event.request;
   if (request.method !== "GET") return;
   if (new URL(request.url).origin !== self.location.origin) return;
+
+  // Navigations go to the network first so a new build appears immediately,
+  // then fall back to the offline copy.
+  if (request.mode === "navigate") {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE).then((cache) => cache.put(request, copy));
+          return response;
+        })
+        .catch(() => caches.match(request).then((cached) => cached || caches.match("./index.html"))),
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(request).then((cached) => {
