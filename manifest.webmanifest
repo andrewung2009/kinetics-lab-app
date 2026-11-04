@@ -24,10 +24,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Continue",
-      "short_name": "Continue",
-      "description": "Jump to your next level",
-      "url": "./",
+      "name": "Today's 5",
+      "short_name": "Today",
+      "description": "Start today's five cards",
+      "url": "./?daily=1",
       "icons": [{ "src": "./icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
