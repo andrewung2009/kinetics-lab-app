@@ -1,7 +1,7 @@
 {
-  "name": "Kinetics Keyword Quiz",
-  "short_name": "Kinetics",
-  "description": "Learn A-Level Chemistry kinetics one keyword at a time.",
+  "name": "Unit 4 Lab — Keyword Quiz",
+  "short_name": "Unit 4 Lab",
+  "description": "Learn A-Level Chemistry Unit 4 one keyword at a time: kinetics, equilibria, acid–base, entropy and energetics.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

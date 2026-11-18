@@ -1,4 +1,4 @@
-const VERSION = "v5";
+const VERSION = "v8";
 const CACHE = `kinetics-quiz-${VERSION}`;
 const REMINDER_CACHE = "kinetics-reminder-v1";
 const REMINDER_KEY = "./reminder-state.json";
@@ -92,7 +92,7 @@ async function saveReminderState(state) {
 async function showReminder(state) {
   const left = Number(state.left) || 5;
   const streak = Number(state.streak) || 0;
-  const title = left <= 1 ? "One card left. That is it." : "5 cards. 60 seconds.";
+  const title = left <= 1 ? "One card left. That is it." : "Unit 4: 5 cards. 60 seconds.";
   const body =
     left <= 1
       ? `One card and today is done.${streak > 0 ? ` Keep your ${streak}-day streak.` : ""}`
